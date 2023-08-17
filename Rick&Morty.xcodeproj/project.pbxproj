@@ -8,18 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BB715FB02A8E5E90004266A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FAF2A8E5E90004266A0 /* AppDelegate.swift */; };
-		BB715FB42A8E5E90004266A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FB32A8E5E90004266A0 /* ViewController.swift */; };
 		BB715FB92A8E5E93004266A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB715FB82A8E5E93004266A0 /* Assets.xcassets */; };
 		BB715FBC2A8E5E99004266A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB715FBA2A8E5E99004266A0 /* LaunchScreen.storyboard */; };
+		BB715FCB2A8E689E004266A0 /* CharacterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FCA2A8E689E004266A0 /* CharacterSelectionViewController.swift */; };
+		BB715FCD2A8E69B7004266A0 /* CharacterSelectionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FCC2A8E69B7004266A0 /* CharacterSelectionInput.swift */; };
+		BB715FCF2A8E6A1E004266A0 /* CharacherSelectionOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FCE2A8E6A1E004266A0 /* CharacherSelectionOutput.swift */; };
+		BB715FD12A8E6A44004266A0 /* CharacterSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FD02A8E6A44004266A0 /* CharacterSelectionPresenter.swift */; };
+		BB715FD42A8E6D90004266A0 /* CharacterSelectionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FD32A8E6D90004266A0 /* CharacterSelectionAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB715FAC2A8E5E90004266A0 /* Rick&Morty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick&Morty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB715FAF2A8E5E90004266A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB715FB32A8E5E90004266A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB715FB82A8E5E93004266A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB715FBB2A8E5E99004266A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB715FBD2A8E5E99004266A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB715FCA2A8E689E004266A0 /* CharacterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionViewController.swift; sourceTree = "<group>"; };
+		BB715FCC2A8E69B7004266A0 /* CharacterSelectionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionInput.swift; sourceTree = "<group>"; };
+		BB715FCE2A8E6A1E004266A0 /* CharacherSelectionOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacherSelectionOutput.swift; sourceTree = "<group>"; };
+		BB715FD02A8E6A44004266A0 /* CharacterSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionPresenter.swift; sourceTree = "<group>"; };
+		BB715FD32A8E6D90004266A0 /* CharacterSelectionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +60,73 @@
 		BB715FAE2A8E5E90004266A0 /* Rick&Morty */ = {
 			isa = PBXGroup;
 			children = (
-				BB715FAF2A8E5E90004266A0 /* AppDelegate.swift */,
-				BB715FB32A8E5E90004266A0 /* ViewController.swift */,
-				BB715FB82A8E5E93004266A0 /* Assets.xcassets */,
-				BB715FBA2A8E5E99004266A0 /* LaunchScreen.storyboard */,
+				BB715FC92A8E67A3004266A0 /* App */,
+				BB715FD22A8E6D75004266A0 /* Assembly */,
+				BB715FC52A8E6675004266A0 /* Model */,
+				BB715FC32A8E6669004266A0 /* Presentetion */,
 				BB715FBD2A8E5E99004266A0 /* Info.plist */,
 			);
 			path = "Rick&Morty";
+			sourceTree = "<group>";
+		};
+		BB715FC32A8E6669004266A0 /* Presentetion */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FC62A8E6779004266A0 /* CharacterSelection */,
+			);
+			path = Presentetion;
+			sourceTree = "<group>";
+		};
+		BB715FC52A8E6675004266A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BB715FC62A8E6779004266A0 /* CharacterSelection */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FC82A8E6799004266A0 /* Presenter */,
+				BB715FC72A8E6781004266A0 /* View */,
+			);
+			path = CharacterSelection;
+			sourceTree = "<group>";
+		};
+		BB715FC72A8E6781004266A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FCA2A8E689E004266A0 /* CharacterSelectionViewController.swift */,
+				BB715FCC2A8E69B7004266A0 /* CharacterSelectionInput.swift */,
+				BB715FCE2A8E6A1E004266A0 /* CharacherSelectionOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB715FC82A8E6799004266A0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FD02A8E6A44004266A0 /* CharacterSelectionPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BB715FC92A8E67A3004266A0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FAF2A8E5E90004266A0 /* AppDelegate.swift */,
+				BB715FB82A8E5E93004266A0 /* Assets.xcassets */,
+				BB715FBA2A8E5E99004266A0 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BB715FD22A8E6D75004266A0 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FD32A8E6D90004266A0 /* CharacterSelectionAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB715FB42A8E5E90004266A0 /* ViewController.swift in Sources */,
 				BB715FB02A8E5E90004266A0 /* AppDelegate.swift in Sources */,
+				BB715FD12A8E6A44004266A0 /* CharacterSelectionPresenter.swift in Sources */,
+				BB715FCF2A8E6A1E004266A0 /* CharacherSelectionOutput.swift in Sources */,
+				BB715FCD2A8E69B7004266A0 /* CharacterSelectionInput.swift in Sources */,
+				BB715FD42A8E6D90004266A0 /* CharacterSelectionAssembly.swift in Sources */,
+				BB715FCB2A8E689E004266A0 /* CharacterSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
