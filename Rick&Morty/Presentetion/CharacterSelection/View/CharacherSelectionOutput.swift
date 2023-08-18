@@ -5,8 +5,7 @@
 //  Created by Александр Меренков on 17.08.2023.
 //
 
-import Foundation
+import UIKit
 
-protocol CharacterSelectionOutput: AnyObject {
-    
+protocol CharacterSelectionOutput: UICollectionViewDataSource {
 }

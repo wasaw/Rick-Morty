@@ -15,6 +15,8 @@
 		BB715FCF2A8E6A1E004266A0 /* CharacherSelectionOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FCE2A8E6A1E004266A0 /* CharacherSelectionOutput.swift */; };
 		BB715FD12A8E6A44004266A0 /* CharacterSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FD02A8E6A44004266A0 /* CharacterSelectionPresenter.swift */; };
 		BB715FD42A8E6D90004266A0 /* CharacterSelectionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FD32A8E6D90004266A0 /* CharacterSelectionAssembly.swift */; };
+		BB715FD72A8F4EA0004266A0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FD62A8F4EA0004266A0 /* Extensions.swift */; };
+		BB715FD92A8F5A7F004266A0 /* CharacterSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FD82A8F5A7F004266A0 /* CharacterSelectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		BB715FCE2A8E6A1E004266A0 /* CharacherSelectionOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacherSelectionOutput.swift; sourceTree = "<group>"; };
 		BB715FD02A8E6A44004266A0 /* CharacterSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionPresenter.swift; sourceTree = "<group>"; };
 		BB715FD32A8E6D90004266A0 /* CharacterSelectionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionAssembly.swift; sourceTree = "<group>"; };
+		BB715FD62A8F4EA0004266A0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BB715FD82A8F5A7F004266A0 /* CharacterSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 				BB715FD22A8E6D75004266A0 /* Assembly */,
 				BB715FC52A8E6675004266A0 /* Model */,
 				BB715FC32A8E6669004266A0 /* Presentetion */,
+				BB715FD52A8F4E88004266A0 /* Utils */,
 				BB715FBD2A8E5E99004266A0 /* Info.plist */,
 			);
 			path = "Rick&Morty";
@@ -99,6 +104,7 @@
 				BB715FCA2A8E689E004266A0 /* CharacterSelectionViewController.swift */,
 				BB715FCC2A8E69B7004266A0 /* CharacterSelectionInput.swift */,
 				BB715FCE2A8E6A1E004266A0 /* CharacherSelectionOutput.swift */,
+				BB715FD82A8F5A7F004266A0 /* CharacterSelectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +133,14 @@
 				BB715FD32A8E6D90004266A0 /* CharacterSelectionAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		BB715FD52A8F4E88004266A0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FD62A8F4EA0004266A0 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +214,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB715FB02A8E5E90004266A0 /* AppDelegate.swift in Sources */,
+				BB715FD72A8F4EA0004266A0 /* Extensions.swift in Sources */,
+				BB715FD92A8F5A7F004266A0 /* CharacterSelectionCell.swift in Sources */,
 				BB715FD12A8E6A44004266A0 /* CharacterSelectionPresenter.swift in Sources */,
 				BB715FCF2A8E6A1E004266A0 /* CharacherSelectionOutput.swift in Sources */,
 				BB715FCD2A8E69B7004266A0 /* CharacterSelectionInput.swift in Sources */,
@@ -348,6 +364,7 @@
 				INFOPLIST_FILE = "Rick&Morty/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -378,6 +395,7 @@
 				INFOPLIST_FILE = "Rick&Morty/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
