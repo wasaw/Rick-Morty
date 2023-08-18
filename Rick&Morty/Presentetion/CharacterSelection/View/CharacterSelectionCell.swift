@@ -10,6 +10,7 @@ import UIKit
 private enum Constans {
     static let imagePadding: CGFloat = 8
     static let nameLabelTop: CGFloat = 15
+    static let cornerRadius: CGFloat = 10
 }
 
 final class CharacterSelectionCell: UICollectionViewCell {
@@ -19,12 +20,10 @@ final class CharacterSelectionCell: UICollectionViewCell {
     
     private lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "rick")
         return imageView
     }()
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Rick Sanchez"
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.textColor = .white
         return label
@@ -57,7 +56,12 @@ final class CharacterSelectionCell: UICollectionViewCell {
         nameLabel.centerX(inView: contentView)
         nameLabel.anchor(top: profileImageView.bottomAnchor, paddingTop: Constans.nameLabelTop)
         
-        layer.cornerRadius = 10
+        layer.cornerRadius = Constans.cornerRadius
         backgroundColor = .cellBackground
+    }
+    
+    func configure(with serialHero: SerialHero) {
+        nameLabel.text = serialHero.name
+        profileImageView.image = serialHero.image
     }
 }

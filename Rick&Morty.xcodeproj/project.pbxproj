@@ -17,6 +17,7 @@
 		BB715FD42A8E6D90004266A0 /* CharacterSelectionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FD32A8E6D90004266A0 /* CharacterSelectionAssembly.swift */; };
 		BB715FD72A8F4EA0004266A0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FD62A8F4EA0004266A0 /* Extensions.swift */; };
 		BB715FD92A8F5A7F004266A0 /* CharacterSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FD82A8F5A7F004266A0 /* CharacterSelectionCell.swift */; };
+		BB715FDB2A8FAB7F004266A0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FDA2A8FAB7E004266A0 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BB715FD32A8E6D90004266A0 /* CharacterSelectionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionAssembly.swift; sourceTree = "<group>"; };
 		BB715FD62A8F4EA0004266A0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BB715FD82A8F5A7F004266A0 /* CharacterSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionCell.swift; sourceTree = "<group>"; };
+		BB715FDA2A8FAB7E004266A0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		BB715FC52A8E6675004266A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BB715FDA2A8FAB7E004266A0 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB715FDB2A8FAB7F004266A0 /* Model.swift in Sources */,
 				BB715FB02A8E5E90004266A0 /* AppDelegate.swift in Sources */,
 				BB715FD72A8F4EA0004266A0 /* Extensions.swift in Sources */,
 				BB715FD92A8F5A7F004266A0 /* CharacterSelectionCell.swift in Sources */,

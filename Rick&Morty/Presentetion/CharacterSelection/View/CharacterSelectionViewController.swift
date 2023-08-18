@@ -68,7 +68,7 @@ final class CharacterSelectionViewController: UIViewController {
         collectionView.anchor(leading: view.leadingAnchor,
                               top: titleLable.bottomAnchor,
                               trailing: view.trailingAnchor,
-                              bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                              bottom: view.bottomAnchor,
                               paddingLeading: Constants.paddingLeading,
                               paddingTop: Constants.collectionViewTop,
                               paddingTrailing: Constants.paddingTrailing)

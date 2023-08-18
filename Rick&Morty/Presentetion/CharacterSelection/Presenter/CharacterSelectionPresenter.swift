@@ -18,6 +18,14 @@ final class CharacterSelectionPresenter: NSObject {
     
     weak var input: CharacterSelectionInput?
 
+    private let serialHeroes = [SerialHero(name: "Rick Sanchez", image: UIImage(named: "rick")),
+                                SerialHero(name: "Morty Smith", image: UIImage(named: "morty")),
+                                SerialHero(name: "Summer Smith", image: UIImage(named: "summer")),
+                                SerialHero(name: "Beth Smith", image: UIImage(named: "beth")),
+                                SerialHero(name: "Rick Sanchez", image: UIImage(named: "rick")),
+                                SerialHero(name: "Morty Smith", image: UIImage(named: "morty")),
+                                SerialHero(name: "Summer Smith", image: UIImage(named: "summer")),
+                                SerialHero(name: "Beth Smith", image: UIImage(named: "beth"))]
 }
 
 // MARK: - CharacterSelectionOutput
@@ -30,12 +38,12 @@ extension CharacterSelectionPresenter: CharacterSelectionOutput {
 
 extension CharacterSelectionPresenter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return serialHeroes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterSelectionCell.reuseIdentifire, for: indexPath)
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterSelectionCell.reuseIdentifire, for: indexPath) as? CharacterSelectionCell else { return UICollectionViewCell() }
+        cell.configure(with: serialHeroes[indexPath.item])
         return cell
     }
 }
