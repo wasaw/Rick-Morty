@@ -25,6 +25,9 @@
 		BB715FE92A934703004266A0 /* DetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FE82A934703004266A0 /* DetailsAssembly.swift */; };
 		BB715FEC2A9348A8004266A0 /* CharacherSelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FEB2A9348A8004266A0 /* CharacherSelectionCoordinator.swift */; };
 		BB715FEE2A9348F7004266A0 /* CharacterSelectionPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FED2A9348F7004266A0 /* CharacterSelectionPresenterOutput.swift */; };
+		BB715FF02A935CFB004266A0 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FEF2A935CFA004266A0 /* InfoView.swift */; };
+		BB715FF22A936910004266A0 /* OriginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FF12A93690F004266A0 /* OriginView.swift */; };
+		BB715FF42A938C3E004266A0 /* EpisodesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FF32A938C3E004266A0 /* EpisodesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		BB715FE82A934703004266A0 /* DetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAssembly.swift; sourceTree = "<group>"; };
 		BB715FEB2A9348A8004266A0 /* CharacherSelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacherSelectionCoordinator.swift; sourceTree = "<group>"; };
 		BB715FED2A9348F7004266A0 /* CharacterSelectionPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionPresenterOutput.swift; sourceTree = "<group>"; };
+		BB715FEF2A935CFA004266A0 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		BB715FF12A93690F004266A0 /* OriginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginView.swift; sourceTree = "<group>"; };
+		BB715FF32A938C3E004266A0 /* EpisodesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +185,9 @@
 				BB715FE22A9345DD004266A0 /* DetailsViewController.swift */,
 				BB715FE42A9345EB004266A0 /* DetailsInput.swift */,
 				BB715FE62A9345F7004266A0 /* DetailsOutput.swift */,
+				BB715FEF2A935CFA004266A0 /* InfoView.swift */,
+				BB715FF12A93690F004266A0 /* OriginView.swift */,
+				BB715FF32A938C3E004266A0 /* EpisodesCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,17 +282,20 @@
 				BB715FB02A8E5E90004266A0 /* AppDelegate.swift in Sources */,
 				BB715FD72A8F4EA0004266A0 /* Extensions.swift in Sources */,
 				BB715FE32A9345DD004266A0 /* DetailsViewController.swift in Sources */,
+				BB715FF02A935CFB004266A0 /* InfoView.swift in Sources */,
 				BB715FD92A8F5A7F004266A0 /* CharacterSelectionCell.swift in Sources */,
 				BB715FD12A8E6A44004266A0 /* CharacterSelectionPresenter.swift in Sources */,
 				BB715FCF2A8E6A1E004266A0 /* CharacherSelectionOutput.swift in Sources */,
 				BB715FE72A9345F7004266A0 /* DetailsOutput.swift in Sources */,
 				BB715FE92A934703004266A0 /* DetailsAssembly.swift in Sources */,
+				BB715FF22A936910004266A0 /* OriginView.swift in Sources */,
 				BB715FE52A9345EB004266A0 /* DetailsInput.swift in Sources */,
 				BB715FCD2A8E69B7004266A0 /* CharacterSelectionInput.swift in Sources */,
 				BB715FE02A9345BB004266A0 /* DetailsPresenter.swift in Sources */,
 				BB715FD42A8E6D90004266A0 /* CharacterSelectionAssembly.swift in Sources */,
 				BB715FCB2A8E689E004266A0 /* CharacterSelectionViewController.swift in Sources */,
 				BB715FEE2A9348F7004266A0 /* CharacterSelectionPresenterOutput.swift in Sources */,
+				BB715FF42A938C3E004266A0 /* EpisodesCell.swift in Sources */,
 				BB715FEC2A9348A8004266A0 /* CharacherSelectionCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

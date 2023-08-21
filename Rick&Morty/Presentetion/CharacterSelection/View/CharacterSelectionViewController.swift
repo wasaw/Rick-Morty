@@ -12,6 +12,8 @@ private enum Constants {
     static let paddingTrailing: CGFloat = -30
     static let titleLabelTop: CGFloat = 25
     static let collectionViewTop: CGFloat = 20
+    static let cellWidth: CGFloat = 156
+    static let cellHeight: CGFloat = 202
 }
 
 final class CharacterSelectionViewController: UIViewController {
@@ -87,5 +89,13 @@ extension CharacterSelectionViewController: CharacterSelectionInput {
 extension CharacterSelectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         output.showDetails()
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension CharacterSelectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: Constants.cellWidth, height: Constants.cellHeight)
     }
 }

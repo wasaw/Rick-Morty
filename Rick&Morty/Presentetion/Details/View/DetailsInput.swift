@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DetailsInput: AnyObject {
-    
+    func showEpisodes(_ height: CGFloat)
 }

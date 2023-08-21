@@ -7,11 +7,6 @@
 
 import UIKit
 
-private enum Constants {
-    static let cellWidth: CGFloat = 156
-    static let cellHeight: CGFloat = 202
-}
-
 final class CharacterSelectionPresenter: NSObject {
     
 //    MARK: - Properties
@@ -57,10 +52,3 @@ extension CharacterSelectionPresenter: UICollectionViewDataSource {
     }
 }
 
-// MARK: - UICollectionViewDelegateFlowLayout
-
-extension CharacterSelectionViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Constants.cellWidth, height: Constants.cellHeight)
-    }
-}
