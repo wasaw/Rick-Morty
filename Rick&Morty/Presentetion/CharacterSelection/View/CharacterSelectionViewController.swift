@@ -85,5 +85,7 @@ extension CharacterSelectionViewController: CharacterSelectionInput {
 // MARK: - UICollectionViewDelegate
 
 extension CharacterSelectionViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        output.showDetails()
+    }
 }

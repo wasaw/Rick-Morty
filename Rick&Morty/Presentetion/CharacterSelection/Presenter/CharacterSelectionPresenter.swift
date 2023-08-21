@@ -17,6 +17,7 @@ final class CharacterSelectionPresenter: NSObject {
 //    MARK: - Properties
     
     weak var input: CharacterSelectionInput?
+    private let output: CharacterSelectionPresenterOutput
 
     private let serialHeroes = [SerialHero(name: "Rick Sanchez", image: UIImage(named: "rick")),
                                 SerialHero(name: "Morty Smith", image: UIImage(named: "morty")),
@@ -26,12 +27,20 @@ final class CharacterSelectionPresenter: NSObject {
                                 SerialHero(name: "Morty Smith", image: UIImage(named: "morty")),
                                 SerialHero(name: "Summer Smith", image: UIImage(named: "summer")),
                                 SerialHero(name: "Beth Smith", image: UIImage(named: "beth"))]
+    
+//    MARK: - Lifecycle
+    
+    init(output: CharacterSelectionPresenterOutput) {
+        self.output = output
+    }
 }
 
 // MARK: - CharacterSelectionOutput
 
 extension CharacterSelectionPresenter: CharacterSelectionOutput {
-    
+    func showDetails() {
+        output.showDetails()
+    }
 }
 
 // MARK: - UICollectionViewDataSource

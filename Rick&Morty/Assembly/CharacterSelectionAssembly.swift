@@ -8,10 +8,11 @@
 import UIKit
 
 final class CharacterSelectionAssembly {
-    func makeCharacterModule() -> UIViewController {
-        let presenter = CharacterSelectionPresenter()
+    func makeCharacterModule(output: CharacterSelectionPresenterOutput) -> UINavigationController {
+        let presenter = CharacterSelectionPresenter(output: output)
         let viewController = CharacterSelectionViewController(output: presenter)
         presenter.input = viewController
-        return viewController
+        let navigation = UINavigationController(rootViewController: viewController)
+        return navigation
     }
 }

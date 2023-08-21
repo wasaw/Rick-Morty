@@ -18,6 +18,13 @@
 		BB715FD72A8F4EA0004266A0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FD62A8F4EA0004266A0 /* Extensions.swift */; };
 		BB715FD92A8F5A7F004266A0 /* CharacterSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FD82A8F5A7F004266A0 /* CharacterSelectionCell.swift */; };
 		BB715FDB2A8FAB7F004266A0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FDA2A8FAB7E004266A0 /* Model.swift */; };
+		BB715FE02A9345BB004266A0 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FDF2A9345BB004266A0 /* DetailsPresenter.swift */; };
+		BB715FE32A9345DD004266A0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FE22A9345DD004266A0 /* DetailsViewController.swift */; };
+		BB715FE52A9345EB004266A0 /* DetailsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FE42A9345EB004266A0 /* DetailsInput.swift */; };
+		BB715FE72A9345F7004266A0 /* DetailsOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FE62A9345F7004266A0 /* DetailsOutput.swift */; };
+		BB715FE92A934703004266A0 /* DetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FE82A934703004266A0 /* DetailsAssembly.swift */; };
+		BB715FEC2A9348A8004266A0 /* CharacherSelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FEB2A9348A8004266A0 /* CharacherSelectionCoordinator.swift */; };
+		BB715FEE2A9348F7004266A0 /* CharacterSelectionPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FED2A9348F7004266A0 /* CharacterSelectionPresenterOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		BB715FD62A8F4EA0004266A0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BB715FD82A8F5A7F004266A0 /* CharacterSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionCell.swift; sourceTree = "<group>"; };
 		BB715FDA2A8FAB7E004266A0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BB715FDF2A9345BB004266A0 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		BB715FE22A9345DD004266A0 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		BB715FE42A9345EB004266A0 /* DetailsInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInput.swift; sourceTree = "<group>"; };
+		BB715FE62A9345F7004266A0 /* DetailsOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsOutput.swift; sourceTree = "<group>"; };
+		BB715FE82A934703004266A0 /* DetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAssembly.swift; sourceTree = "<group>"; };
+		BB715FEB2A9348A8004266A0 /* CharacherSelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacherSelectionCoordinator.swift; sourceTree = "<group>"; };
+		BB715FED2A9348F7004266A0 /* CharacterSelectionPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionPresenterOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,7 @@
 			children = (
 				BB715FC92A8E67A3004266A0 /* App */,
 				BB715FD22A8E6D75004266A0 /* Assembly */,
+				BB715FEA2A93488F004266A0 /* Coordinator */,
 				BB715FC52A8E6675004266A0 /* Model */,
 				BB715FC32A8E6669004266A0 /* Presentetion */,
 				BB715FD52A8F4E88004266A0 /* Utils */,
@@ -80,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				BB715FC62A8E6779004266A0 /* CharacterSelection */,
+				BB715FDC2A934589004266A0 /* Details */,
 			);
 			path = Presentetion;
 			sourceTree = "<group>";
@@ -116,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				BB715FD02A8E6A44004266A0 /* CharacterSelectionPresenter.swift */,
+				BB715FED2A9348F7004266A0 /* CharacterSelectionPresenterOutput.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -134,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				BB715FD32A8E6D90004266A0 /* CharacterSelectionAssembly.swift */,
+				BB715FE82A934703004266A0 /* DetailsAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -144,6 +162,41 @@
 				BB715FD62A8F4EA0004266A0 /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		BB715FDC2A934589004266A0 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FDE2A9345A6004266A0 /* Presenter */,
+				BB715FDD2A9345A2004266A0 /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		BB715FDD2A9345A2004266A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FE22A9345DD004266A0 /* DetailsViewController.swift */,
+				BB715FE42A9345EB004266A0 /* DetailsInput.swift */,
+				BB715FE62A9345F7004266A0 /* DetailsOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB715FDE2A9345A6004266A0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FDF2A9345BB004266A0 /* DetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BB715FEA2A93488F004266A0 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FEB2A9348A8004266A0 /* CharacherSelectionCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,12 +272,19 @@
 				BB715FDB2A8FAB7F004266A0 /* Model.swift in Sources */,
 				BB715FB02A8E5E90004266A0 /* AppDelegate.swift in Sources */,
 				BB715FD72A8F4EA0004266A0 /* Extensions.swift in Sources */,
+				BB715FE32A9345DD004266A0 /* DetailsViewController.swift in Sources */,
 				BB715FD92A8F5A7F004266A0 /* CharacterSelectionCell.swift in Sources */,
 				BB715FD12A8E6A44004266A0 /* CharacterSelectionPresenter.swift in Sources */,
 				BB715FCF2A8E6A1E004266A0 /* CharacherSelectionOutput.swift in Sources */,
+				BB715FE72A9345F7004266A0 /* DetailsOutput.swift in Sources */,
+				BB715FE92A934703004266A0 /* DetailsAssembly.swift in Sources */,
+				BB715FE52A9345EB004266A0 /* DetailsInput.swift in Sources */,
 				BB715FCD2A8E69B7004266A0 /* CharacterSelectionInput.swift in Sources */,
+				BB715FE02A9345BB004266A0 /* DetailsPresenter.swift in Sources */,
 				BB715FD42A8E6D90004266A0 /* CharacterSelectionAssembly.swift in Sources */,
 				BB715FCB2A8E689E004266A0 /* CharacterSelectionViewController.swift in Sources */,
+				BB715FEE2A9348F7004266A0 /* CharacterSelectionPresenterOutput.swift in Sources */,
+				BB715FEC2A9348A8004266A0 /* CharacherSelectionCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        MARK: - Assembly
         let characterAssembly = CharacterSelectionAssembly()
-        let rootViewController = characterAssembly.makeCharacterModule()
+        let detailsAssembly = DetailsAssembly()
+        let characterCoordinator = CharacherSelectionCoordinator(characterAssembly: characterAssembly, detailsAssembly: detailsAssembly)
+        let rootViewController = characterCoordinator.start()
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
