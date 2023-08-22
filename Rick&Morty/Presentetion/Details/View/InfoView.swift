@@ -24,7 +24,6 @@ final class InfoView: UIView {
     }()
     private lazy var speciesInfoLabel: UILabel = {
         let label = UILabel()
-        label.text = "Human"
         label.textColor = .white
         return label
     }()
@@ -36,7 +35,6 @@ final class InfoView: UIView {
     }()
     private lazy var typeInfoLabel: UILabel = {
         let label = UILabel()
-        label.text = "None"
         label.textColor = .white
         return label
     }()
@@ -48,7 +46,6 @@ final class InfoView: UIView {
     }()
     private lazy var genderInfoLabel: UILabel = {
         let label = UILabel()
-        label.text = "Male"
         label.textColor = .white
         return label
     }()
@@ -89,5 +86,11 @@ final class InfoView: UIView {
         
         layer.cornerRadius = Constants.cornerRadius
         backgroundColor = .cellBackground
+    }
+    
+    func setInformation(_ characher: Character) {
+        speciesInfoLabel.text = characher.species
+        typeInfoLabel.text = characher.type.isEmpty ? "None" : characher.type
+        genderInfoLabel.text = characher.gender
     }
 }

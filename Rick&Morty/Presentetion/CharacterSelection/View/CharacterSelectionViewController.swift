@@ -52,6 +52,11 @@ final class CharacterSelectionViewController: UIViewController {
         view.backgroundColor = .backgroundColor
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.tintColor = .white
+    }
+    
 //    MARK: - Helpers
     
     private func configureUI() {
@@ -81,14 +86,16 @@ final class CharacterSelectionViewController: UIViewController {
 // MARK: - CharacterSelectionInput
 
 extension CharacterSelectionViewController: CharacterSelectionInput {
-    
+    func reloadCollection() {
+        collectionView.reloadData()
+    }
 }
 
 // MARK: - UICollectionViewDelegate
 
 extension CharacterSelectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        output.showDetails()
+        output.showDetails(for: indexPath.item)
     }
 }
 

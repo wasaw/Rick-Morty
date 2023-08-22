@@ -19,21 +19,18 @@ final class EpisodesCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Pilot"
         label.font = UIFont.boldSystemFont(ofSize: 19)
         label.textColor = .white
         return label
     }()
     private lazy var serialNumberLabel: UILabel = {
         let label = UILabel()
-        label.text = "Episode: 1, Season: 1"
         label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = .greenText
         return label
     }()
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
-        label.text = "December 2, 2013"
         label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = .lightGray
         return label
@@ -57,8 +54,10 @@ final class EpisodesCell: UICollectionViewCell {
         contentView.addSubview(titleLabel)
         titleLabel.anchor(leading: contentView.leadingAnchor,
                           top: contentView.topAnchor,
+                          trailing: contentView.trailingAnchor,
                           paddingLeading: Constants.paddings,
-                          paddingTop: Constants.paddings)
+                          paddingTop: Constants.paddings,
+                          paddingTrailing: -Constants.paddings)
         
         contentView.addSubview(serialNumberLabel)
         serialNumberLabel.anchor(leading: contentView.leadingAnchor,
@@ -74,5 +73,21 @@ final class EpisodesCell: UICollectionViewCell {
         
         layer.cornerRadius = Constants.cornerRadius
         backgroundColor = .cellBackground
+    }
+    
+    func setInformation(_ episode: Episode) {
+        titleLabel.text = episode.name
+        var start = episode.episode.index(episode.episode.startIndex, offsetBy: 1)
+        var end = episode.episode.index(start, offsetBy: 1)
+        var range = start...end
+        let seasonSubString = episode.episode[range]
+        let season = String(seasonSubString)
+        start = episode.episode.index(episode.episode.startIndex, offsetBy: 4)
+        end = episode.episode.index(start, offsetBy: 1)
+        range = start...end
+        let seriesSubString = episode.episode[range]
+        let series = String(seriesSubString)
+        serialNumberLabel.text = "Episode: \(series), Season: \(season)"
+        dateLabel.text = episode.airDate
     }
 }

@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        MARK: - Assembly
         let characterAssembly = CharacterSelectionAssembly()
         let detailsAssembly = DetailsAssembly()
-        let characterCoordinator = CharacherSelectionCoordinator(characterAssembly: characterAssembly, detailsAssembly: detailsAssembly)
+        let network = NetworkService()
+        let characterCoordinator = CharacherSelectionCoordinator(characterAssembly: characterAssembly,
+                                                                 detailsAssembly: detailsAssembly,
+                                                                 network: network)
         let rootViewController = characterCoordinator.start()
         
         let window = UIWindow(frame: UIScreen.main.bounds)

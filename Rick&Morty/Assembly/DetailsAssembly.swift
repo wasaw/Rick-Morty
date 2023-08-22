@@ -8,8 +8,8 @@
 import UIKit
 
 final class DetailsAssembly {
-    func makeDetailsModule() -> UIViewController {
-        let presenter = DetailsPresenter()
+    func makeDetailsModule(_ displayData: Character, network: NetworkServiceProtocol) -> UIViewController {
+        let presenter = DetailsPresenter(character: displayData, network: network)
         let viewController = DetailsViewController(output: presenter)
         presenter.input = viewController
         return viewController

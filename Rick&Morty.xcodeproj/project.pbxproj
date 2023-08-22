@@ -28,6 +28,8 @@
 		BB715FF02A935CFB004266A0 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FEF2A935CFA004266A0 /* InfoView.swift */; };
 		BB715FF22A936910004266A0 /* OriginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FF12A93690F004266A0 /* OriginView.swift */; };
 		BB715FF42A938C3E004266A0 /* EpisodesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FF32A938C3E004266A0 /* EpisodesCell.swift */; };
+		BB715FF72A94969E004266A0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FF62A94969E004266A0 /* NetworkService.swift */; };
+		BB715FF92A9496B9004266A0 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB715FF82A9496B9004266A0 /* NetworkServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		BB715FEF2A935CFA004266A0 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		BB715FF12A93690F004266A0 /* OriginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginView.swift; sourceTree = "<group>"; };
 		BB715FF32A938C3E004266A0 /* EpisodesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesCell.swift; sourceTree = "<group>"; };
+		BB715FF62A94969E004266A0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BB715FF82A9496B9004266A0 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				BB715FEA2A93488F004266A0 /* Coordinator */,
 				BB715FC52A8E6675004266A0 /* Model */,
 				BB715FC32A8E6669004266A0 /* Presentetion */,
+				BB715FF52A949679004266A0 /* Core */,
 				BB715FD52A8F4E88004266A0 /* Utils */,
 				BB715FBD2A8E5E99004266A0 /* Info.plist */,
 			);
@@ -208,6 +213,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		BB715FF52A949679004266A0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BB715FF62A94969E004266A0 /* NetworkService.swift */,
+				BB715FF82A9496B9004266A0 /* NetworkServiceProtocol.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,12 +302,14 @@
 				BB715FCF2A8E6A1E004266A0 /* CharacherSelectionOutput.swift in Sources */,
 				BB715FE72A9345F7004266A0 /* DetailsOutput.swift in Sources */,
 				BB715FE92A934703004266A0 /* DetailsAssembly.swift in Sources */,
+				BB715FF72A94969E004266A0 /* NetworkService.swift in Sources */,
 				BB715FF22A936910004266A0 /* OriginView.swift in Sources */,
 				BB715FE52A9345EB004266A0 /* DetailsInput.swift in Sources */,
 				BB715FCD2A8E69B7004266A0 /* CharacterSelectionInput.swift in Sources */,
 				BB715FE02A9345BB004266A0 /* DetailsPresenter.swift in Sources */,
 				BB715FD42A8E6D90004266A0 /* CharacterSelectionAssembly.swift in Sources */,
 				BB715FCB2A8E689E004266A0 /* CharacterSelectionViewController.swift in Sources */,
+				BB715FF92A9496B9004266A0 /* NetworkServiceProtocol.swift in Sources */,
 				BB715FEE2A9348F7004266A0 /* CharacterSelectionPresenterOutput.swift in Sources */,
 				BB715FF42A938C3E004266A0 /* EpisodesCell.swift in Sources */,
 				BB715FEC2A9348A8004266A0 /* CharacherSelectionCoordinator.swift in Sources */,

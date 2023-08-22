@@ -13,28 +13,40 @@ final class CharacterSelectionPresenter: NSObject {
     
     weak var input: CharacterSelectionInput?
     private let output: CharacterSelectionPresenterOutput
+    private let network: NetworkServiceProtocol
 
-    private let serialHeroes = [SerialHero(name: "Rick Sanchez", image: UIImage(named: "rick")),
-                                SerialHero(name: "Morty Smith", image: UIImage(named: "morty")),
-                                SerialHero(name: "Summer Smith", image: UIImage(named: "summer")),
-                                SerialHero(name: "Beth Smith", image: UIImage(named: "beth")),
-                                SerialHero(name: "Rick Sanchez", image: UIImage(named: "rick")),
-                                SerialHero(name: "Morty Smith", image: UIImage(named: "morty")),
-                                SerialHero(name: "Summer Smith", image: UIImage(named: "summer")),
-                                SerialHero(name: "Beth Smith", image: UIImage(named: "beth"))]
+    private var characters: [Character] = []
     
 //    MARK: - Lifecycle
     
-    init(output: CharacterSelectionPresenterOutput) {
+    init(output: CharacterSelectionPresenterOutput, network: NetworkServiceProtocol) {
         self.output = output
+        self.network = network
+        super.init()
+        load()
+    }
+    
+//    MARK: - Helpers
+    
+    private func load() {
+        guard let url = URL(string: "https://rickandmortyapi.com/api/character") else { return }
+        let request = URLRequest(url: url)
+        network.loadData(request: request) { [weak self] (result: Result<CharacterAnswer, Error>) in
+            switch result {
+            case .success(let answer):
+                self?.characters = answer.results
+            case .failure:
+                print("failure")
+            }
+        }
     }
 }
 
 // MARK: - CharacterSelectionOutput
 
 extension CharacterSelectionPresenter: CharacterSelectionOutput {
-    func showDetails() {
-        output.showDetails()
+    func showDetails(for index: Int) {
+        output.showDetails(characters[index])
     }
 }
 
@@ -42,12 +54,12 @@ extension CharacterSelectionPresenter: CharacterSelectionOutput {
 
 extension CharacterSelectionPresenter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return serialHeroes.count
+        return characters.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterSelectionCell.reuseIdentifire, for: indexPath) as? CharacterSelectionCell else { return UICollectionViewCell() }
-        cell.configure(with: serialHeroes[indexPath.item])
+        cell.configure(with: characters[indexPath.item])
         return cell
     }
 }

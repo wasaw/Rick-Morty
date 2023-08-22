@@ -8,6 +8,7 @@
 import UIKit
 
 private enum Constants {
+    static let profileImageDimensions: CGFloat = 148
     static let stackTop: CGFloat = 25
     static let stackSpacing: CGFloat = 15
     static let viewHorizontalPadding: CGFloat = 10
@@ -17,6 +18,7 @@ private enum Constants {
     static let cellHeight: CGFloat = 86
     static let cellHorizontalPadding: CGFloat = 20
     static let lineSpacing: CGFloat = 20
+    static let cornerRadius: CGFloat = 10
 }
 
 final class DetailsViewController: UIViewController {
@@ -35,19 +37,20 @@ final class DetailsViewController: UIViewController {
     }()
     private lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "rick")
+        imageView.anchor(width: Constants.profileImageDimensions,
+                         height: Constants.profileImageDimensions)
+        imageView.layer.cornerRadius = Constants.cornerRadius
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Rick Sanchez"
         label.font = UIFont.boldSystemFont(ofSize: 21)
         label.textColor = .white
         return label
     }()
     private lazy var statusLabel: UILabel = {
         let label = UILabel()
-        label.text = "Alive"
         label.textColor = .greenText
         return label
     }()
@@ -90,7 +93,8 @@ final class DetailsViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+300)
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.backItem?.title = ""
     }
     
     override func viewDidLoad() {
@@ -103,6 +107,7 @@ final class DetailsViewController: UIViewController {
 //    MARK: - Helpers
     
     private func configureUI(_ height: CGFloat) {
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: height)
         view.addSubview(scrollView)
         scrollView.anchor(leading: view.leadingAnchor,
                           top: view.safeAreaLayoutGuide.topAnchor,
@@ -183,8 +188,17 @@ final class DetailsViewController: UIViewController {
 // MARK: - DetailsInput
 
 extension DetailsViewController: DetailsInput {
+    func showData(_ character: Character) {
+        nameLabel.text = character.name
+        statusLabel.text = character.status
+        profileImageView.imageFromUrl(character.image) {
+        }
+        infoView.setInformation(character)
+        originView.setInformation(character)
+    }
+    
     func showEpisodes(_ height: CGFloat) {
-       configureUI(height)
+        configureUI(height)
     }
 }
 

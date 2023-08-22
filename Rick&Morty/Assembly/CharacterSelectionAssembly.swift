@@ -8,8 +8,8 @@
 import UIKit
 
 final class CharacterSelectionAssembly {
-    func makeCharacterModule(output: CharacterSelectionPresenterOutput) -> UINavigationController {
-        let presenter = CharacterSelectionPresenter(output: output)
+    func makeCharacterModule(output: CharacterSelectionPresenterOutput, network: NetworkServiceProtocol) -> UINavigationController {
+        let presenter = CharacterSelectionPresenter(output: output, network: network)
         let viewController = CharacterSelectionViewController(output: presenter)
         presenter.input = viewController
         let navigation = UINavigationController(rootViewController: viewController)

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CharacterSelectionPresenterOutput: AnyObject {
-    func showDetails()
+    func showDetails(_ displayData: Character)
 }

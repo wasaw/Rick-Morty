@@ -8,4 +8,5 @@
 import Foundation
 
 protocol CharacterSelectionInput: AnyObject {
+    func reloadCollection()
 }

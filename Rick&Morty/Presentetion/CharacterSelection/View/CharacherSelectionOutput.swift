@@ -8,5 +8,5 @@
 import UIKit
 
 protocol CharacterSelectionOutput: UICollectionViewDataSource {
-    func showDetails()
+    func showDetails(for index: Int)
 }

@@ -33,7 +33,6 @@ final class OriginView: UIView {
     }()
     private lazy var originNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Earth"
         label.font = UIFont.boldSystemFont(ofSize: 19)
         label.textColor = .white
         return label
@@ -78,12 +77,18 @@ final class OriginView: UIView {
         addSubview(labelStack)
         labelStack.anchor(leading: planetView.trailingAnchor,
                           top: topAnchor,
+                          trailing: trailingAnchor,
                           bottom: bottomAnchor,
                           paddingLeading: Constants.stackPadding,
                           paddingTop: Constants.stackVerticalPadding,
+                          paddingTrailing: -Constants.stackPadding,
                           paddingBottom: -Constants.stackVerticalPadding)
         
         layer.cornerRadius = Constants.cornerRadius
         backgroundColor = .cellBackground
+    }
+    
+    func setInformation(_ character: Character) {
+        originNameLabel.text = character.origin.name
     }
 }

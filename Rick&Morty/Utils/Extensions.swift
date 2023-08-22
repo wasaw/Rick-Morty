@@ -66,3 +66,27 @@ extension UIView {
         centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant).isActive = true
     }
 }
+
+// MARK: - UIImageView
+
+extension UIImageView {
+    func imageFromUrl(_ urlString: String, completion: (@escaping () -> Void)) {
+        if let url = URL(string: urlString) {
+            let imageLoad = URLSession.shared.dataTask(with: url) { data, _, error in
+                guard let data = data, error == nil else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: data)
+                    completion()
+                }
+                if error != nil {
+                    DispatchQueue.main.async {
+                        self.image = UIImage(named: "rick")
+                    }
+                }
+            }
+            imageLoad.resume()
+        }
+    }
+}
