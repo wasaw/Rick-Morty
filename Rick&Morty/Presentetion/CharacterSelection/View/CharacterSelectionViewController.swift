@@ -10,6 +10,7 @@ import UIKit
 private enum Constants {
     static let paddingLeading: CGFloat = 30
     static let paddingTrailing: CGFloat = -30
+    static let activateTop: CGFloat = 15
     static let titleLabelTop: CGFloat = 25
     static let collectionViewTop: CGFloat = 20
     static let cellWidth: CGFloat = 156
@@ -31,6 +32,8 @@ final class CharacterSelectionViewController: UIViewController {
     }()
     private lazy var layout = UICollectionViewFlowLayout()
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+    
+    private lazy var activateIndicator = UIActivityIndicatorView(style: .medium)
 
 //    MARK: - Lifecycle
     
@@ -79,6 +82,12 @@ final class CharacterSelectionViewController: UIViewController {
                               paddingLeading: Constants.paddingLeading,
                               paddingTop: Constants.collectionViewTop,
                               paddingTrailing: Constants.paddingTrailing)
+        
+        collectionView.addSubview(activateIndicator)
+        activateIndicator.centerX(inView: collectionView)
+        activateIndicator.anchor(top: collectionView.topAnchor, paddingTop: Constants.activateTop)
+        activateIndicator.color = .white
+        activateIndicator.startAnimating()
         collectionView.backgroundColor = .backgroundColor
     }
 }
@@ -88,6 +97,7 @@ final class CharacterSelectionViewController: UIViewController {
 extension CharacterSelectionViewController: CharacterSelectionInput {
     func reloadCollection() {
         collectionView.reloadData()
+        activateIndicator.stopAnimating()
     }
 }
 

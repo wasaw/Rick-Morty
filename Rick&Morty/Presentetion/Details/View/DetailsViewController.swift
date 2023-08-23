@@ -13,6 +13,7 @@ private enum Constants {
     static let stackSpacing: CGFloat = 15
     static let viewHorizontalPadding: CGFloat = 10
     static let paddingTop: CGFloat = 25
+    static let activateTop: CGFloat = 15
     static let infoHeight: CGFloat = 124
     static let originHeight: CGFloat = 80
     static let cellHeight: CGFloat = 86
@@ -80,6 +81,8 @@ final class DetailsViewController: UIViewController {
     
     private lazy var layout = UICollectionViewFlowLayout()
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+    
+    private lazy var activateIndicator = UIActivityIndicatorView(style: .medium)
     
 //    MARK: - Lifecycle
     
@@ -182,6 +185,12 @@ final class DetailsViewController: UIViewController {
                               bottom: contentView.bottomAnchor,
                               paddingTop: Constants.paddingTop,
                               height: height)
+        
+        view.addSubview(activateIndicator)
+        activateIndicator.centerX(inView: view)
+        activateIndicator.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: Constants.activateTop)
+        activateIndicator.color = .white
+        activateIndicator.startAnimating()
     }
 }
 
@@ -199,6 +208,7 @@ extension DetailsViewController: DetailsInput {
     
     func showEpisodes(_ height: CGFloat) {
         configureUI(height)
+        activateIndicator.stopAnimating()
     }
 }
 

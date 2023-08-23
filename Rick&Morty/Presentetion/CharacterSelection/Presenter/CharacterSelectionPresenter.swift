@@ -35,6 +35,9 @@ final class CharacterSelectionPresenter: NSObject {
             switch result {
             case .success(let answer):
                 self?.characters = answer.results
+                DispatchQueue.main.async {
+                    self?.input?.reloadCollection()
+                }
             case .failure:
                 print("failure")
             }
