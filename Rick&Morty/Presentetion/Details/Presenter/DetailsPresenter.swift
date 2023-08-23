@@ -48,14 +48,16 @@ extension DetailsPresenter: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EpisodesCell.reuseIdentifire, for: indexPath) as? EpisodesCell else { return UICollectionViewCell() }
         guard let url = URL(string: character.episode[indexPath.item]) else { return UICollectionViewCell() }
         let request = URLRequest(url: url)
-        network.loadData(request: request) { (result: Result<Episode, Error>) in
+        network.loadData(request: request) { [weak self] (result: Result<Episode, Error>) in
             switch result {
             case .success(let episode):
                 DispatchQueue.main.async {
                     cell.setInformation(episode)
                 }
             case .failure:
-                print("DEBUG: failure")
+                DispatchQueue.main.async {
+                    self?.input?.showAlert()
+                }
             }
         }
         return cell

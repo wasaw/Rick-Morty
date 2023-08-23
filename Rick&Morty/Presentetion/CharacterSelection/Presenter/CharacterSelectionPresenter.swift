@@ -39,7 +39,9 @@ final class CharacterSelectionPresenter: NSObject {
                     self?.input?.reloadCollection()
                 }
             case .failure:
-                print("failure")
+                DispatchQueue.main.async {
+                    self?.input?.showAlert()
+                }
             }
         }
     }

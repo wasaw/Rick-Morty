@@ -8,5 +8,6 @@
 import Foundation
 
 protocol CharacterSelectionInput: AnyObject {
+    func showAlert()
     func reloadCollection()
 }

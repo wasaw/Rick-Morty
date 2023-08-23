@@ -197,6 +197,12 @@ final class DetailsViewController: UIViewController {
 // MARK: - DetailsInput
 
 extension DetailsViewController: DetailsInput {
+    func showAlert() {
+        let alert = UIAlertController(title: "Внимание", message: "Произошла непредвиденная ошибка, попробуйте снова", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ок", style: .default))
+        present(alert, animated: true)
+    }
+    
     func showData(_ character: Character) {
         nameLabel.text = character.name
         statusLabel.text = character.status

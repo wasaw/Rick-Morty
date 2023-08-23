@@ -33,7 +33,7 @@ extension NetworkService: NetworkServiceProtocol {
                     guard let decodedData = try self?.decoder.decode(T.self, from: data) else { return }
                     completion(.success(decodedData))
                 } catch {
-                    print(error.localizedDescription)
+                    completion(.failure(error))
                 }
             }
         }

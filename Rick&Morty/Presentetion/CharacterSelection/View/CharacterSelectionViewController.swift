@@ -95,6 +95,12 @@ final class CharacterSelectionViewController: UIViewController {
 // MARK: - CharacterSelectionInput
 
 extension CharacterSelectionViewController: CharacterSelectionInput {
+    func showAlert() {
+        let alert = UIAlertController(title: "Внимание", message: "Произошла непредвиденная ошибка, попробуйте снова", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ок", style: .default))
+        present(alert, animated: true)
+    }
+    
     func reloadCollection() {
         collectionView.reloadData()
         activateIndicator.stopAnimating()
